@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "./Components/SideBarComponents/Sidebar";
 import Home from "./Components/Main/Home";
 import "remixicon/fonts/remixicon.css";
+import Projects from "./Components/Main/Projects";
 
 const App = () => {
   const [activePage, setActivePage] = useState("home");
@@ -15,7 +16,7 @@ const App = () => {
       case "contact":
         return "contact";
       case "projects":
-        return "projects";
+        return <Projects/>;
       case "videos":
         return "videos";
       default:
@@ -27,9 +28,10 @@ const App = () => {
       <div>
         <Sidebar setActivePage={setActivePage} />
       </div>
-<div  
+<div
+className="flex justify-center items-center w-full h-full"  
   style={{
-    background: "radial-gradient(circle, #9642CF 0%, #9642CF 25%, #151515 70%)"
+    background: "radial-gradient(circle, #9642CF 0%, #9642CF 25%, #151515 60%)"
   }}
 >
   {renderPage()}
