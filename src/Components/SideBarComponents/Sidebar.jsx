@@ -42,8 +42,8 @@ const Sidebar = ({ setActivePage }) => {
           <div className="capitalize space-y-6 cursor-pointer text-lg ">
             <h1 className="tracking-tight" onClick={() => handleClick("home")}> <span><i className="ri-cup-line"></i></span> home</h1>
             <h1 className="tracking-tight" onClick={() => handleClick("projects")}> <span><i className="ri-database-2-line"></i></span> projects</h1>
-            <h1 className="tracking-tight" onClick={() => handleClick("videos")}> <span><i className="ri-tv-2-line"></i></span> videos</h1>
             <h1 className="tracking-tight" onClick={() => handleClick("about")}><i className="ri-at-line"></i> about</h1>
+            <h1 className="tracking-tight" onClick={() => handleClick("videos")}> <span><i className="ri-tv-2-line"></i></span> videos</h1>
             <h1 className="tracking-tight" onClick={() => handleClick("contact")}> <span><i className="ri-box-1-line"></i></span> contact</h1>
           </div>
         </div>

@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import Sidebar from "./Components/SideBarComponents/Sidebar";
 import Home from "./Components/Main/Home";
 import "remixicon/fonts/remixicon.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import Projects from "./Components/Main/Projects";
+import About from "./Components/Main/About";
+import Videos from "./Components/Main/Videos";
+import Contact from "./Components/Main/Contact";
 
 const App = () => {
   const [activePage, setActivePage] = useState("home");
@@ -10,15 +14,15 @@ const App = () => {
   const renderPage = () => {
     switch (activePage) {
       case "home":
-        return <Home />;
+        return <Home setActivePage={setActivePage} />;
       case "about":
-        return "aboout";
+        return <About />;
       case "contact":
-        return "contact";
+        return <Contact />;
       case "projects":
-        return <Projects/>;
+        return <Projects setActivePage={setActivePage} />;
       case "videos":
-        return "videos";
+        return <Videos />;
       default:
         return <Home />;
     }
@@ -28,15 +32,15 @@ const App = () => {
       <div>
         <Sidebar setActivePage={setActivePage} />
       </div>
-<div
-className="flex justify-center items-center w-full h-full"  
-  style={{
-    background: "radial-gradient(circle, #9642CF 0%, #9642CF 25%, #151515 60%)"
-  }}
->
-  {renderPage()}
-</div>
-
+      <div
+        className="flex justify-center items-center w-full h-full"
+        style={{
+          background:
+            "radial-gradient(circle, #9642CF 0%, #9642CF 25%, #151515 60%)",
+        }}
+      >
+        {renderPage()}
+      </div>
     </div>
   );
 };

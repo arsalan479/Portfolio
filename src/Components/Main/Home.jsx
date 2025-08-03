@@ -2,7 +2,12 @@ import React from "react";
 import Footer from "../SideBarComponents/Footer";
 import project1 from '../../assets/project1.png';
 
-const Home = () => {
+const Home = ({setActivePage}) => {
+
+  const handleClick = (page) => {
+    setActivePage(page);
+  };
+
   return (
   <div className="overflow-auto h-screen w-full">
       <div className="text-white  p-10 flex flex-col">
@@ -31,11 +36,11 @@ const Home = () => {
             </div>
             <div className="bg-[#111111] p-8 rounded-lg border border-gray-600 shadow-lg flex flex-col justify-center items-center">
               <p className="text-4xl">50+</p>
-              <p className="text-sm text-gray-400 mt-2">Satisfied Clients</p>
+              <p className="text-sm text-gray-400 mt-2 text-center">Satisfied Clients</p>
             </div>
             <div className="bg-[#111111] p-8 rounded-lg border border-gray-600 shadow-lg flex flex-col justify-center items-center">
               <p className="text-4xl">6</p>
-              <p className="text-sm text-gray-400 mt-2">Years Experience</p>
+              <p className="text-sm text-gray-400 mt-2 text-center">Years Experience</p>
             </div>
           </div>
 
@@ -44,7 +49,7 @@ const Home = () => {
             <h1 className="text-2xl capitalize tracking-tight mb-4">
               Your ultimate webflow partner
             </h1>
-            <p className="text-gray-400 leading-relaxed mb-6">
+            <p className="text-gray-400 leading-relaxed mb-6 ">
               Eliminate the hassle of dealing with developers lacking design
               sensibility, and trust in someone who possesses the expertise,
               passion, and vision to realize your ideas as you've imagined them.
@@ -61,7 +66,7 @@ const Home = () => {
             <h2 className="text-xl text-center mb-4 text-white">
               Featured Projects
             </h2>
-            <p className="text-center leading-0 text-blue-400 cursor-pointer">View All<span><i class="ri-arrow-drop-right-line"></i></span></p>
+            <p className="text-center leading-0 text-blue-400 cursor-pointer" onClick={() => handleClick("projects")} >View All<span><i class="ri-arrow-drop-right-line"></i></span></p>
            <div className="p-2 rounded-lg mt-10  border-2 border-gray-600">
             <img src={project1} className="w-full h-full" alt="project1" />
            </div>
