@@ -6,7 +6,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Projects from "./Components/Main/Projects";
 import About from "./Components/Main/About";
 import Videos from "./Components/Main/Videos";
-import Contact from "./Components/Main/Contact";
 
 const App = () => {
   const [activePage, setActivePage] = useState("home");
@@ -17,8 +16,6 @@ const App = () => {
         return <Home setActivePage={setActivePage} />;
       case "about":
         return <About />;
-      case "contact":
-        return <Contact />;
       case "projects":
         return <Projects setActivePage={setActivePage} />;
       case "videos":

@@ -25,22 +25,22 @@ const Home = ({setActivePage}) => {
           {/* Left - 4 Small Boxes */}
           <div className="grid grid-cols-2 gap-3">
             <div className="bg-[#111111] p-8 rounded-lg border border-gray-600 shadow-lg flex flex-col justify-center items-center">
-              <p className="text-4xl">100+</p>
+              <p className="text-4xl">500+</p>
               <p className="text-sm text-center text-gray-400 mt-2">
-                Completed Projects
+                LinkdIn Connection
               </p>
             </div>
             <div className="bg-[#111111] p-8 rounded-lg border border-gray-600 shadow-lg flex flex-col justify-center items-center">
-              <p className="text-xl">Webflow</p>
+              <p className="text-xl uppercase">Mern</p>
               <p className="text-xl">Expert</p>
             </div>
             <div className="bg-[#111111] p-8 rounded-lg border border-gray-600 shadow-lg flex flex-col justify-center items-center">
-              <p className="text-4xl">50+</p>
+              <p className="text-4xl">5+</p>
               <p className="text-sm text-gray-400 mt-2 text-center">Satisfied Clients</p>
             </div>
             <div className="bg-[#111111] p-8 rounded-lg border border-gray-600 shadow-lg flex flex-col justify-center items-center">
-              <p className="text-4xl">6</p>
-              <p className="text-sm text-gray-400 mt-2 text-center">Years Experience</p>
+              <p className="text-4xl">2+</p>
+              <p className="text-sm text-gray-400 mt-2 text-center">Year Project Making Experience</p>
             </div>
           </div>
 
