@@ -73,8 +73,13 @@ const About = () => {
                 goals. I aim to blend creativity with technology to build
                 innovative and impactful projects.
               </p>
-              <p className="text-blue-400 font-medium hover:underline transition mt-4 cursor-pointer">
-                Let’s Connect <i className="ri-arrow-right-s-line"></i>
+             <p className="text-blue-400 mt-3 cursor-pointer font-medium ">
+                <a href="/resume.pdf" download>
+                  Access Resume
+                  <span>
+                    <i class="ri-arrow-drop-right-line"></i>
+                  </span>
+                </a>
               </p>
             </div>
           </div>

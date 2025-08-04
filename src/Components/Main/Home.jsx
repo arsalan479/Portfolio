@@ -59,9 +59,9 @@ const Home = ({ setActivePage }) => {
                 them.
               </p>
 
-              <p className="text-blue-400 cursor-pointer font-medium hover:underline transition">
+              <p className="text-blue-400 cursor-pointer font-medium ">
                 <a href="/resume.pdf" download>
-                  Get in touch
+                  Access Resume
                   <span>
                     <i class="ri-arrow-drop-right-line"></i>
                   </span>
