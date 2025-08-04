@@ -34,7 +34,7 @@ const Sidebar = ({ setActivePage }) => {
 
               <div>
                 <h1 className="font-bold uppercase text-xl mt-3 tracking-tight">Arsalan Ali Khan</h1>
-                <p className="text-center mt-2 text-sm tracking-tight uppercase slogan">javascript expert</p>
+                {/* <p className="text-center mt-2 text-md  uppercase slogan">javascript expert</p> */}
               </div>
 
           </div>

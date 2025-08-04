@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
 @import "tailwindcss";
 
 @media (max-width: 600px) {
@@ -23,7 +23,6 @@ body {
   color: white;
 }
 .slogan {
-  font-family: "Goldman", sans-serif;
+  font-family: "Protest Riot", sans-serif;
   font-style: normal;
-  font-weight: 800;
 }
