@@ -7,6 +7,8 @@ const Home = ({ setActivePage }) => {
     setActivePage(page);
   };
 
+ 
+
   return (
     <div className="overflow-auto h-screen w-full">
       <div className="text-white  p-10 flex flex-col">
@@ -89,12 +91,14 @@ const Home = ({ setActivePage }) => {
                 <img src={project1} className="w-full h-full" alt="project1" />
               </div>
             </div>
-            <div className="bg-[#111111] p-10 rounded-lg border border-gray-600 shadow-lg">
-              <h2 className="text-xl  mb-4 text-white">Trusted By</h2>
+            <div className="bg-[#111111] flex justify-center items-center p-10 rounded-lg border border-gray-600 shadow-lg">
+             <div>
+               <h2 className="text-xl  mb-4 text-white">Trusted By</h2>
               <p className="text-gray-400">
                 Proudly collaborated with global clients and organizations who
-                value quality and innovation.
+                value quality and innovation Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, quo.
               </p>
+             </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import profilepic from "../../assets/portfolio pic.png";
 
 const Sidebar = ({ setActivePage }) => {
@@ -8,6 +8,8 @@ const Sidebar = ({ setActivePage }) => {
     setActivePage(page);
     setIsOpen(false); // sidebar close on click (for mobile)
   };
+
+
 
   return (
     <>
@@ -38,8 +40,14 @@ const Sidebar = ({ setActivePage }) => {
               <h1 className="font-bold uppercase text-xl mt-3 ">
                 Arsalan Ali Khan
               </h1>
-              <p className="font-extralight text-center mt-1 text-md uppercase slogan">
-                Script Mastery <span className="ml-1"><i class="ri-code-s-slash-line text-[#9240C9]"></i></span>
+              <p
+              
+                className="font-extralight text-center mt-1 text-md uppercase slogan"
+              >
+                Script Mastery
+                <span className="ml-1">
+                  <i class="ri-code-s-slash-line text-[#9240C9]"></i>
+                </span>
               </p>
             </div>
           </div>
