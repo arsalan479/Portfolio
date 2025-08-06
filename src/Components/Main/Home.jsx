@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../SideBarComponents/Footer";
-import project1 from "../../assets/project1.png";
+import project1 from "../../assets/mockupsnapstudy.png";
 
 const Home = ({ setActivePage }) => {
   const handleClick = (page) => {
@@ -85,7 +85,7 @@ const Home = ({ setActivePage }) => {
                   <i class="ri-arrow-drop-right-line"></i>
                 </span>
               </p>
-              <div className="p-2 rounded-lg mt-10  border-2 border-gray-600">
+              <div className="overflow-hidden rounded-lg mt-10 border-2 border-gray-600">
                 <img src={project1} className="w-full h-full" alt="project1" />
               </div>
             </div>

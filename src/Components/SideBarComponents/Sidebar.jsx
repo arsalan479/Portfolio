@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import profilepic from '../../assets/portfolio pic.png';
+import profilepic from "../../assets/portfolio pic.png";
 
 const Sidebar = ({ setActivePage }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,27 +25,57 @@ const Sidebar = ({ setActivePage }) => {
         ${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
       >
         <div className="flex flex-col justify-center items-center h-screen text-white">
-
           <div className="flex flex-col justify-center items-center relative bottom-30">
+            <div className="w-23 h-23">
+              <img
+                src={profilepic}
+                className="w-full h-full rounded-full"
+                alt=""
+              />
+            </div>
 
-             <div className="w-23 h-23">
-              <img src={profilepic} className="w-full h-full rounded-full" alt="" />
-              </div> 
-
-              <div>
-                <h1 className="font-bold uppercase text-xl mt-3 tracking-tight">Arsalan Ali Khan</h1>
-                {/* <p className="text-center mt-2 text-md  uppercase slogan">javascript expert</p> */}
-              </div>
-
+            <div>
+              <h1 className="font-bold uppercase text-xl mt-3 ">
+                Arsalan Ali Khan
+              </h1>
+              <p className="font-extralight text-center mt-1 text-md uppercase slogan">
+                Script Mastery <span className="ml-1"><i class="ri-code-s-slash-line text-[#9240C9]"></i></span>
+              </p>
+            </div>
           </div>
 
-
           <div className="capitalize space-y-6 cursor-pointer text-lg ">
-            <h1 className="tracking-tight" onClick={() => handleClick("home")}> <span><i className="ri-cup-line"></i></span> home</h1>
-            <h1 className="tracking-tight" onClick={() => handleClick("projects")}> <span><i className="ri-database-2-line"></i></span> projects</h1>
-            <h1 className="tracking-tight" onClick={() => handleClick("about")}><i className="ri-at-line"></i> about</h1>
-            <h1 className="tracking-tight" onClick={() => handleClick("videos")}> <span><i className="ri-tv-2-line"></i></span> videos</h1>
-            </div>
+            <h1 className="tracking-tight" onClick={() => handleClick("home")}>
+              {" "}
+              <span>
+                <i className="ri-cup-line"></i>
+              </span>{" "}
+              home
+            </h1>
+            <h1
+              className="tracking-tight"
+              onClick={() => handleClick("projects")}
+            >
+              {" "}
+              <span>
+                <i className="ri-database-2-line"></i>
+              </span>{" "}
+              projects
+            </h1>
+            <h1 className="tracking-tight" onClick={() => handleClick("about")}>
+              <i className="ri-at-line"></i> about
+            </h1>
+            <h1
+              className="tracking-tight"
+              onClick={() => handleClick("videos")}
+            >
+              {" "}
+              <span>
+                <i className="ri-tv-2-line"></i>
+              </span>{" "}
+              videos
+            </h1>
+          </div>
         </div>
       </div>
 
