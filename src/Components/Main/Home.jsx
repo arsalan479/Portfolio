@@ -1,13 +1,57 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Footer from "../SideBarComponents/Footer";
 import project1 from "../../assets/mockupsnapstudy.png";
+import { animate, stagger } from "animejs";
 
 const Home = ({ setActivePage }) => {
   const handleClick = (page) => {
     setActivePage(page);
   };
 
- 
+const div1 = useRef(null);
+const div2 = useRef(null)
+const textref = useRef(null)
+
+  useEffect(() => {
+     animate(
+      div1.current,
+      { 
+        opacity: [0, 1],
+        scale: [0.8, 1],
+      },
+      {
+        duration: 0.6,  // in seconds
+        delay: 0.4,     // in seconds
+        easing: "ease-out"
+      }
+    );
+      animate(
+      div2.current,
+      { 
+        opacity: [0, 1],
+        scale: [0.8, 1],
+      },
+      {
+        duration: 0.6,  // in seconds
+        delay: 0.4,     // in seconds
+        easing: "ease-out"
+      }
+    );
+      animate(
+      textref.current,
+      { 
+        opacity: [0, 1],
+        scale: [0.8, 1],
+      },
+      {
+        duration: 0.6,  // in seconds
+        delay: 0.4,     // in seconds
+        easing: "ease-out"
+      }
+    );
+    
+  }, []);
+
 
   return (
     <div className="overflow-auto h-screen w-full">
@@ -16,13 +60,13 @@ const Home = ({ setActivePage }) => {
         <div className="flex-grow">
           {/* Heading */}
           <div className="mb-12">
-            <h1 className="text-4xl capitalize tracking-tight">
+            <h1 ref={textref}  className="text-4xl capitalize tracking-tight">
               Webflow Development <br /> Subscription Services
             </h1>
           </div>
 
           {/* Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+          <div ref={div1} className="grid grid-cols-1 lg:grid-cols-2 gap-3">
             {/* Left - 4 Small Boxes */}
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-[#111111] p-8 rounded-lg border border-gray-600 shadow-lg flex flex-col justify-center items-center">
@@ -73,7 +117,7 @@ const Home = ({ setActivePage }) => {
           </div>
 
           {/* Featured Projects + Trusted By Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+          <div ref={div2} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
             <div className="bg-[#111111] p-10 rounded-lg border border-gray-600 shadow-lg">
               <h2 className="text-xl text-center mb-4 text-white">
                 Featured Projects

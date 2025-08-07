@@ -1,12 +1,44 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Footer from "../SideBarComponents/Footer";
 import project1 from "../../assets/mockupsnapstudy.png";
 import project2 from "../../assets/synthaimockup.png";
+import { animate } from "animejs";
 
 const Projects = ({ setActivePage }) => {
   const handleClick = () => {
     setActivePage("videos");
   };
+
+  const div1 = useRef(null);
+  const textref = useRef(null)
+
+  useEffect(()=>{
+     animate(
+      div1.current,
+      { 
+        opacity: [0, 1],
+        scale: [0.8, 1],
+      },
+      {
+        duration: 0.6,  // in seconds
+        delay: 0.4,     // in seconds
+        easing: "ease-out"
+      }
+    );
+     animate(
+      textref.current,
+      { 
+        opacity: [0, 1],
+        scale: [0.8, 1],
+      },
+      {
+        duration: 0.6,  // in seconds
+        delay: 0.4,     // in seconds
+        easing: "ease-out"
+      }
+    );
+  },[])
+
 
   return (
     <div className="overflow-auto h-screen w-full">
@@ -14,12 +46,12 @@ const Projects = ({ setActivePage }) => {
         {/* Content Wrapper */}
         <div className="flex-grow">
           {/* Heading */}
-          <div className="mb-12">
-            <h1 className="text-4xl capitalize">all projects</h1>
+          <div ref={textref} className="mb-12">
+            <h1  className="text-4xl capitalize">all projects</h1>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <div ref={div1} className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             
             {/* Project 1 */}
             <div className="bg-[#111111] overflow-hidden rounded-lg border border-gray-600">

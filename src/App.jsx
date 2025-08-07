@@ -25,7 +25,9 @@ const App = () => {
     }
   };
   return (
+
     <div className="flex bg-[#151515] w-full h-screen">
+  
       <div>
         <Sidebar setActivePage={setActivePage} />
       </div>

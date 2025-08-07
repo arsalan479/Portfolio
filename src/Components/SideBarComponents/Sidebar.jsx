@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import profilepic from "../../assets/portfolio pic.png";
 
 const Sidebar = ({ setActivePage }) => {
@@ -8,6 +8,7 @@ const Sidebar = ({ setActivePage }) => {
     setActivePage(page);
     setIsOpen(false); // sidebar close on click (for mobile)
   };
+
 
 
 

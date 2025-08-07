@@ -1,7 +1,53 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Footer from "../SideBarComponents/Footer";
+import { animate } from "animejs";
+
 
 const About = () => {
+
+  const div1 = useRef(null);
+  const div2 = useRef(null);
+  const textref = useRef(null)
+
+   useEffect(()=>{
+       animate(
+        div1.current,
+        { 
+          opacity: [0, 1],
+          scale: [0.8, 1],
+        },
+        {
+          duration: 0.6,  // in seconds
+          delay: 0.4,     // in seconds
+          easing: "ease-out"
+        }
+      );
+      animate(
+        div2.current,
+        { 
+          opacity: [0, 1],
+          scale: [0.8, 1],
+        },
+        {
+          duration: 0.6,  // in seconds
+          delay: 0.4,     // in seconds
+          easing: "ease-out"
+        }
+      );
+       animate(
+        textref.current,
+        { 
+          opacity: [0, 1],
+          scale: [0.8, 1],
+        },
+        {
+          duration: 0.6,  // in seconds
+          delay: 0.4,     // in seconds
+          easing: "ease-out"
+        }
+      );
+    },[])
+
   return (
     <>
       <div className="overflow-auto h-screen w-full ">
@@ -16,7 +62,7 @@ const About = () => {
           </div>
 
           {/* First Row - About + Skills */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+          <div ref={div1} className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
             {/* Card 1 - About */}
             <div className="bg-[#111111] p-8 rounded-lg border border-gray-600 shadow-lg">
               <h2 className="text-2xl font-semibold text-white mb-4">
@@ -48,7 +94,7 @@ const About = () => {
           </div>
 
           {/* Second Row - Experience + Mission */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div ref={div2} className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Card 3 - Experience */}
             <div className="bg-[#111111] p-8 rounded-lg border border-gray-600 shadow-lg">
               <h2 className="text-2xl font-semibold text-white mb-4">
