@@ -84,7 +84,6 @@ const Projects = ({ setActivePage }) => {
                       onClick={handleClick}
                       className="text-blue-400 cursor-pointer"
                     >
-                      {" "}
                       video<i className="ri-arrow-drop-right-line"></i>
                     </span>
                   </p>
@@ -122,7 +121,7 @@ const Projects = ({ setActivePage }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <i className="text-[20px] bg-white text-black rounded-full p-2 cursor-pointer ri-arrow-right-up-long-line"></i>
+                      <i className="text-[20px] bg-white text-black rounded-full p-2.5 cursor-pointer ri-share-box-line"></i>
                     </a>
                   </h1>
                   <p className="capitalize pt-2 pb-1 text-sm text-gray-500">
